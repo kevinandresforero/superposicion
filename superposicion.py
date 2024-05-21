@@ -118,7 +118,7 @@ class SuperposicionMAS:
     return self.amp_to_db(amplitude), frequency
 
 
-#   ejemplo de uso de la clase
+'''#   ejemplo de uso de la clase
 
 #from superposicion_mas import SuperposicionMAS
 
@@ -142,8 +142,7 @@ amplitud, frecuencia_dominante = superposicion.get_db_frecuencia_dominante(x)
 
 print("dB:", amplitud)
 print("Frecuencia dominante:", frecuencia_dominante)
-
-
+'''
 
 #   graficar superposición
 '''import matplotlib.pyplot as plt
