@@ -85,7 +85,7 @@ class SuperposicionMAS:
 
     return x
 
-  def get_amplitud_frecuencia_dominante(self, signal):
+  def get_db_frecuencia_dominante(self, signal):
     """
     Obtiene la amplitud y la frecuencia dominante de la señal de ruido.
 
@@ -115,12 +115,12 @@ class SuperposicionMAS:
     frequency = np.abs(frequencies[max_amplitude_idx])
 
     # Return both amplitude and frequency in a tuple
-    return amplitude, frequency
+    return self.amp_to_db(amplitude), frequency
 
 
 #   ejemplo de uso de la clase
-'''
-from superposicion_mas import SuperposicionMAS
+
+#from superposicion_mas import SuperposicionMAS
 
 # Parámetros
 db1 = 60  # Nivel de potencia en decibeles del primer MAS
@@ -138,11 +138,11 @@ t = np.linspace(0, 10, 1000)  # Rango de tiempo
 x = superposicion.calcular_superposicion()
 
 # Obtener amplitud y frecuencia dominante
-amplitud, frecuencia_dominante = superposicion.get_amplitud_frecuencia_dominante(x)
+amplitud, frecuencia_dominante = superposicion.get_db_frecuencia_dominante(x)
 
-print("Amplitud:", amplitud)
+print("dB:", amplitud)
 print("Frecuencia dominante:", frecuencia_dominante)
-'''
+
 
 
 #   graficar superposición
