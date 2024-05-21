@@ -79,6 +79,7 @@ class SuperposicionMAS:
     A2 = self.db_to_amp(self.db2)
 
     # Calcular las funciones
+    t = np.linspace(0, 10, 1000)  # Rango de tiempo
     y1 = A1 * np.sin(self.w1 * t + self.phi1)
     y2 = A2 * np.sin(self.w2 * t + self.phi2)
     x = y1 + y2
@@ -117,8 +118,8 @@ class SuperposicionMAS:
     # Return both amplitude and frequency in a tuple
     return self.amp_to_db(amplitude), frequency
 
-
-'''#   ejemplo de uso de la clase
+'''
+#   ejemplo de uso de la clase
 
 #from superposicion_mas import SuperposicionMAS
 
@@ -141,8 +142,8 @@ x = superposicion.calcular_superposicion()
 amplitud, frecuencia_dominante = superposicion.get_db_frecuencia_dominante(x)
 
 print("dB:", amplitud)
-print("Frecuencia dominante:", frecuencia_dominante)
-'''
+print("Frecuencia dominante:", frecuencia_dominante)'''
+
 
 #   graficar superposición
 '''import matplotlib.pyplot as plt
